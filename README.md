@@ -1,10 +1,7 @@
 # Utilisation
-Il faut que le terminal soit dans le même répertoire que l'executable
+
 ## Linux
 ./gw2craft.exe {Tier} {Job}
-
-## Windows
-gw2craft.exe {Tier} {Job}
 
 # Paramètre {Job}
 Job peut être :
