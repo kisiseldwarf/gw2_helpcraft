@@ -1,7 +1,7 @@
 # Utilisation
 
 ## Linux
-./gw2craft.exe {Tier} {Job}
+./gw2craft {Tier} {Job}
 
 # Paramètre {Job}
 Job peut être :
