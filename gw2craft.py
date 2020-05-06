@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import urllib
+import urllib.request
 import json
 import sys
 import webbrowser
@@ -37,7 +38,8 @@ tier = sys.argv[1]
 job = sys.argv[2]
 
 print("Retrieving items names and quantity...")
-mysite = urllib.request.urlopen('https://gw2crafts.net/'+job+'.html')
+gw2crafturl = 'https://gw2crafts.net/'+job+'.html'
+mysite = urllib.request.urlopen(gw2crafturl)
 soup_mysite = BeautifulSoup(mysite,features="lxml")
 list_names, list_qt = retrieve(soup_mysite,tier)
 list_qt = list(map(lambda x : x.text, list_qt))
@@ -57,3 +59,4 @@ for i in range(len(list_id)):
 
 gw2efficiencyurl = "https://gw2efficiency.com/crafting/calculator/a~0!b~1!c~0!d~"+request
 webbrowser.open(gw2efficiencyurl,new=2)
+webbrowser.open(gw2crafturl+'#'+tier)
